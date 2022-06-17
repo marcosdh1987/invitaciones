@@ -43,6 +43,23 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   }
 
+.btn-mybutton {
+  background-color: burlywood;
+  color: #fff; 
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.countdown {
+  padding: 20px;
+  background-color: burlywood;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -53,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #149ddd;
+  background: burlywood;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -65,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #2eafec;
+  background: rgb(1, 1, 1);
   color: #fff;
 }
 .back-to-top.active {
@@ -86,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: burlywood;
   overflow-y: auto;
 }
 #header .profile img {
@@ -176,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 .nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
-  color: #149ddd;
+  color: rgb(0, 0, 0);
 }
 
 /* Mobile Navigation */
@@ -189,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: burlywood;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -297,7 +314,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: #dd9714;
   bottom: 0;
   left: 0;
 }
@@ -748,7 +765,7 @@ section {
 }
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: burlywood;
   float: left;
   width: 44px;
   height: 44px;
@@ -797,7 +814,7 @@ section {
   color: #fff;
 }
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #149ddd;
+  background: burlywood;
   color: #fff;
 }
 .contact .php-email-form {
@@ -950,7 +967,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: burlywood;
 }
 #footer .copyright {
   text-align: center;
