@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 .btn-mybutton {
-  background-color: burlywood;
+  background-color: #55826E;
   color: #fff; 
   border: none;
   padding: 10px;
@@ -53,11 +53,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .countdown {
   padding: 20px;
-  background-color: burlywood;
+  /* background-color: #55826E; */
   font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
+
+.countdown2 {
+  display: grid;
+  background-color: #B6c4a9;
+  border-radius: 30px;
+  color: #fff;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+
 
 
 /*--------------------------------------------------------------
@@ -70,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: burlywood;
+  background: #55826E;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -103,14 +116,14 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: burlywood;
+  background: #B6c4a9;
   overflow-y: auto;
 }
 #header .profile img {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 1px solid #2c2f3f;
 }
 #header .profile h1 {
   font-size: 24px;
@@ -122,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 #header .profile h1 a, #header .profile h1 a:hover {
-  color: #fff;
+  color: #8f8e62;
   text-decoration: none;
 }
 #header .profile .social-links a {
@@ -140,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 #header .profile .social-links a:hover {
-  background: #149ddd;
+  background: #9ea66e;
   color: #fff;
   text-decoration: none;
 }
@@ -190,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
   text-decoration: none;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
   color: rgb(0, 0, 0);
@@ -206,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: burlywood;
+  background-color: #55826E;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -283,6 +296,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
     margin-bottom: 30px;
   }
+  
 }
 
 /*--------------------------------------------------------------
@@ -302,11 +316,11 @@ section {
 }
 .section-title h2 {
   font-size: 32px;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #000000;
 }
 .section-title h2::after {
   content: "";
@@ -314,7 +328,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #dd9714;
+  background: #55826E;
   bottom: 0;
   left: 0;
 }
@@ -967,7 +981,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: burlywood;
+  background: #B6c4a9;
 }
 #footer .copyright {
   text-align: center;
