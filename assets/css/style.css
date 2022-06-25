@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .countdown2 {
+  font-size: 15px;
   display: grid;
   background-color: #B6c4a9;
   border-radius: 30px;
