@@ -29,6 +29,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Barcelony';
 }
 
+
+
 /*--------------------------------------------------------------
 # My custom CSS
 --------------------------------------------------------------*/
@@ -317,7 +319,7 @@ section {
   padding-bottom: 30px;
 }
 .section-title h2 {
-  font-size: 32px;
+  font-size: 20px;
   /* font-weight: bold; */
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -342,9 +344,9 @@ section {
 # About
 --------------------------------------------------------------*/
 .about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c;
+
+  font-size: 20px;
+  color: #000000;
 }
 .about .content ul {
   list-style: none;
