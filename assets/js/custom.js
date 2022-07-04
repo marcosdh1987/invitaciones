@@ -1,4 +1,7 @@
-
+// document.getElementById('mydiv').style.display='block';
+var nombres = ['marcos', 'celeste'];
+var apellidos = ['soto', 'caceres'];
+// Leer();
 countdown();
 
 function countdown(){
@@ -28,3 +31,49 @@ function countdown(){
     setTimeout(countdown, 1000);
 
 }
+
+function mostrar(nombre, apellido){
+    
+    apellido = apellido.toLowerCase();
+    nombre = nombre.toLowerCase();
+    console.log(nombres.includes(nombre));
+    console.log(nombre);
+    if (nombres.includes(nombre)){
+        if (apellidos.includes(apellido)){
+            alert("Hola " + nombre + " " + apellido);
+            document.getElementById('mydiv1').style.display='block';
+            document.getElementById('mydiv2').style.display='block';
+            document.getElementById('buscate').style.display='none';
+        }
+    }else{
+        alert("No estas registrado");
+    }
+
+}
+
+function Leer() {
+
+    //leer datos from json file
+    fetch("./assets/data/invitados.json")
+    .then(response => response.json())
+    .then(data => {
+        for (let i = 0; i < data.length; i++){
+            nombres.push((data[i].nombre));
+            apellidos.push(data[i].apellido);
+        }
+        });
+    console.log(nombres);
+    console.log(apellidos);
+    // iterating over the nombres
+    for (let index = 0; index < nombres.length; index++) {
+        const element = nombres[index];
+        console.log(element);
+    }
+
+
+}
+   
+
+    
+
+
