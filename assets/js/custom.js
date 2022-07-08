@@ -54,7 +54,7 @@ function Mostrar(){
 function Leer(nombre, apellido) {
 
     //leer datos from url
-    var url = "https://181.231.239.219:8000/"+nombre+"/"+apellido;
+    var url = "http://181.231.239.219:8000/"+nombre+"/"+apellido;
 
     console.log(url);
     fetch(url)
