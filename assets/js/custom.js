@@ -1,8 +1,7 @@
-// document.getElementById('mydiv').style.display='block';
-var nombres = ['marcos', 'celeste'];
-var apellidos = ['soto', 'caceres'];
-// Leer();
+
 countdown();
+// document.body.addEventListener("click", Buscar(nombre, apellido), {once:true})
+
 
 function countdown(){
 
@@ -32,44 +31,51 @@ function countdown(){
 
 }
 
-function mostrar(nombre, apellido){
-    
+function Buscar(nombre, apellido) {
+    if (nombre == "" || apellido == ""){
+        alert("Ingrese nombre y apellido");
+    }else {
+        
     apellido = apellido.toLowerCase();
     nombre = nombre.toLowerCase();
-    console.log(nombres.includes(nombre));
-    console.log(nombre);
-    if (nombres.includes(nombre)){
-        if (apellidos.includes(apellido)){
-            alert("Hola " + nombre + " " + apellido);
-            document.getElementById('mydiv1').style.display='block';
-            document.getElementById('mydiv2').style.display='block';
-            document.getElementById('buscate').style.display='none';
-        }
-    }else{
-        alert("No estas registrado");
-    }
+    Leer(nombre, apellido);
+}
 
 }
 
-function Leer() {
+function Mostrar(){
+    
+    document.getElementById('mydiv1').style.display='block';
+    document.getElementById('mydiv2').style.display='block';
+    document.getElementById('buscate').style.display='none';
 
-    //leer datos from json file
-    fetch("./assets/data/invitados.json")
+}
+
+function Leer(nombre, apellido) {
+
+    //leer datos from url
+    var url = "http://181.231.239.219:5000/"+nombre+"/"+apellido;
+
+    console.log(url);
+    fetch(url)
     .then(response => response.json())
-    .then(data => {
-        for (let i = 0; i < data.length; i++){
-            nombres.push((data[i].nombre));
-            apellidos.push(data[i].apellido);
-        }
-        });
-    console.log(nombres);
-    console.log(apellidos);
-    // iterating over the nombres
-    for (let index = 0; index < nombres.length; index++) {
-        const element = nombres[index];
-        console.log(element);
-    }
+    .then(data => data.result)
+    .then(result => {
+        console.log(result);
+        res = result;
+        if (res == "true"){
+            console.log("user found");
+            alert("Hola " + nombre + " " + apellido);
+            Mostrar();
 
+        } else{
+            console.log("user not found");
+            alert(nombre+" no estas registrado, volve a intentarlo")};
+        }
+        
+    );
+
+    
 
 }
    
