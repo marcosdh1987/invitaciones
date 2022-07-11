@@ -54,26 +54,56 @@ function Mostrar(){
 function Leer(nombre, apellido) {
 
     //leer datos from url
-    var url = "https://181.231.239.219:8000/"+nombre+"/"+apellido;
+    // var url = "https://181.231.239.219:8000/"+nombre+"/"+apellido;
 
-    console.log(url);
-    fetch(url)
-    .then(response => response.json())
-    .then(data => data.result)
-    .then(result => {
-        console.log(result);
-        res = result;
-        if (res == "true"){
-            console.log("user found");
-            alert("Hola " + nombre + " " + apellido);
-            Mostrar();
+    // console.log(url);
+    // fetch(url)
+    // .then(response => response.json())
+    // .then(data => data.result)
+    // .then(result => {
+    //     console.log(result);
+    //     res = result;
+    //     if (res == "true"){
+    //         console.log("user found");
+    //         alert("Hola " + nombre + " " + apellido);
+    //         Mostrar();
 
-        } else{
-            console.log("user not found");
-            alert(nombre+" no estas registrado, volve a intentarlo")};
-        }
+    //     } else{
+    //         console.log("user not found");
+    //         alert(nombre+" no estas registrado, volve a intentarlo")};
+    //     }
         
-    );
+    // );
+
+    var url = "https://raw.githubusercontent.com/marcosdh1987/test_lc_demo_001/main/datos.csv";
+
+
+    fetch(url)
+    .then(response => response.text())
+    .then(data => {
+        // console.log(data);
+        res = data;
+        //iterate over csv content
+        var lines = res.split("\n");
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            var parts = line.split(",");
+            var nombre_csv = parts[0];
+            var apellido_csv = parts[1];
+            var nombre_csv = nombre_csv.toLowerCase();
+
+            var apellido_csv = apellido_csv.toLowerCase();
+
+            if (nombre_csv == nombre){
+                if (apellido_csv == apellido){
+                console.log("user found");}
+                alert("Hola " + nombre + " " + apellido);
+                Mostrar();
+                
+            }
+        }
+
+    });
 
     
 
