@@ -1,7 +1,7 @@
 
 countdown();
 // document.body.addEventListener("click", Buscar(nombre, apellido), {once:true})
-
+flag = 0;
 
 function countdown(){
 
@@ -78,6 +78,7 @@ function Leer(nombre, apellido) {
     var url = "https://raw.githubusercontent.com/marcosdh1987/test_lc_demo_001/main/datos.csv";
 
 
+
     fetch(url)
     .then(response => response.text())
     .then(data => {
@@ -85,25 +86,31 @@ function Leer(nombre, apellido) {
         res = data;
         //iterate over csv content
         var lines = res.split("\n");
+        nombre = nombre.replace(/ /g, '');
         for (var i = 0; i < lines.length; i++) {
             var line = lines[i];
             var parts = line.split(",");
             var nombre_csv = parts[0];
             var apellido_csv = parts[1];
             var nombre_csv = nombre_csv.toLowerCase();
-
+            nombre_csv = nombre_csv.replace(/ /g, '');
             var apellido_csv = apellido_csv.toLowerCase();
-
-            if (nombre_csv == nombre){
+            if (nombre_csv.toString() === nombre.toString()){
+                console.log("name found");
                 if (apellido_csv == apellido){
-                console.log("user found");}
-                alert("Hola " + nombre + " " + apellido);
-                Mostrar();
-                
-            }
+                console.log("lastname found");}
+                flag = 1;
+            }   
+        }
+        if (flag == 0){
+            alert(nombre+" no estas registrado, volve a intentarlo")}
+        else{
+            alert("Hola " + nombre + " " + apellido);
+            Mostrar();
         }
 
     });
+
 
     
 
