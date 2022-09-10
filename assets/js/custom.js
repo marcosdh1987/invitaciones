@@ -94,7 +94,7 @@ function Leer(nombre, apellido) {
             var apellido_csv = parts[1];
             var nombre_csv = nombre_csv.toLowerCase();
             nombre_csv = nombre_csv.replace(/ /g, '');
-            var apellido_csv = apellido_csv.toLowerCase();
+            var apellido_csv = apellido_csv
             if (nombre_csv.toString() === nombre.toString()){
                 console.log("name found");
                 if (apellido_csv == apellido){
