@@ -8,7 +8,7 @@ function countdown(){
     var tabla = document.getElementById("datos-tabla");
 
     var now = new Date();
-    var eventDate = new Date(2022, 11, 19, 18);
+    var eventDate = new Date("Nov 19, 2022 18:00:00");
     var currentTime = now.getTime();
     var eventTime = eventDate.getTime();
     var remainingTime = eventTime - currentTime;
